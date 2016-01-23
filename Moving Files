@@ -1,0 +1,11 @@
+
+#Moving files from one folder to another
+import os, shutil
+
+Source = "C:/Users/Marion/Desktop/Folder A/"
+Destination = "C:/Users/Marion/Desktop/Folder B/"
+
+for items in os.listdir ("C:/Users/Marion/Desktop/Folder A/"):
+    shutil.move(Source + items,Destination)
+
+print "all files have been moved to \n" +Destination
