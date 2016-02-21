@@ -1,0 +1,46 @@
+from datetime import datetime
+
+now=datetime.now()
+currentHour= now.hour      #This is Portland time in hours 
+currentMin= now.minute
+currentHourNY= now.hour +3 #This is New York time in hours
+currentHourL= now.hour +8  #This is London time in hours
+
+
+#Portland military to civilian time
+if currentHour > 12:
+    print ("Portland time: "+str(currentHour -12)+":"+str(currentMin))
+elif currentHour < 12:
+    print ("Portland time: "+str(currentHour)+":"+str(currentMin))
+print '\n' #spacing
+
+
+#THIS IS NEW YORK
+print ("New York Store Hours are 9AM-9PM")
+
+#New York military to civilian time
+if currentHourNY > 12:
+    print ("New York time: "+str(currentHourNY -12)+":"+str(currentMin))
+elif currentHourNY < 12:
+    print ("New York time: "+str(currentHourNY)+":"+str(currentMin))
+
+if currentHourNY > 9 or currentHourNY < 21:
+    print "The New York Store is currently Open"
+elif currentHourNY < 9 or currentHourNY > 21:
+    print "The New York Store is currently Closed"
+print '\n'    
+
+#THIS IS LONDON
+print ("London Store Hours are 9AM-9PM")
+
+#London military to civilian time
+if currentHourL > 12:
+    print ("London time: "+str(currentHourL -12)+":"+str(currentMin))
+elif currentHourL < 12:
+    print ("London time: "+str(currentHourL)+":"+str(currentMin))
+
+if currentHourL > 9 or currentHourL < 21:
+    print "The New York Store is currently Open"
+elif currentHourL < 9 or currentHourL > 21:
+    print "The New York Store is currently Closed"
+
