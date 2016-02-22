@@ -1,0 +1,17 @@
+import time
+import os
+
+yesterday = time.time() - 86400
+
+folder = "C:/Users/Marion/Desktop/Folder/"
+
+os.chdir(folder)
+for somefile in os.listdir('.'):
+    st=os.stat(somefile)
+    fileChange=st.st_mtime
+    diff= (yesterday - fileChange)/86400
+    if diff < 1:
+        print(('remove %s'%somefile))
+        print(diff)
+    else:
+        print((somefile + " is over 24 hours old"))
