@@ -1,0 +1,19 @@
+#py3
+import sqlite3
+con = sqlite3.connect('YourDatabase.db')
+
+con.row_factory = sqlite3.Row
+cur = con.cursor ()
+
+
+
+cur.execute("SELECT * FROM YourDatabase")
+
+
+
+for columnRow in cur:
+    assert columnRow [0] == columnRow [0]
+    assert columnRow [1] == columnRow [1]
+    print(columnRow[1])
+    print(columnRow[2])
+
